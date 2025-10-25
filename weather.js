@@ -17,19 +17,19 @@ document.querySelector(".temp").innerHTML=data.main.temp+"ºc";
 document.querySelector(".humidity").innerHTML=data.main.humidity+"%";
 document.querySelector(".wind").innerHTML=data.wind.speed+"km/hr";
 
-if(data.weather[0]=="Haze")
+if(data.weather[0].main=="Haze")
 {
     wicon.src="images/haze.png";
 }
-else if(data.weather[0]=="Clouds")
+else if(data.weather[0].main=="Clouds")
 {
     wicon.src="images/cloudy.png";
 }
-else if(data.weather[0]=="Rain")
+else if(data.weather[0].main=="Rain")
 {
     wicon.src="images/rain.png";
 }
-else if(data.weather[0]=="Drizzle")
+else if(data.weather[0].main=="Drizzle")
 {
     wicon.src="images/drizzle.png";
 }
@@ -43,5 +43,4 @@ searchBtn.addEventListener("click",()=>
     checkWeather(searchBox.value);
 })
 
-
-checkWeather();
+//checkWewather()
